@@ -26,7 +26,6 @@ func fn() {
 	}()
 	go func() {
 		defer wg.Done()
-
 		err := listenHotkey(hotkey.KeyA, hotkey.ModCtrl, hotkey.ModShift)
 		if err != nil {
 			log.Println(err)
