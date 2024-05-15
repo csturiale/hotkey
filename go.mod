@@ -1,4 +1,4 @@
-module golang.design/x/hotkey
+module github.com/csturiale/hotkey
 
 go 1.17
 
