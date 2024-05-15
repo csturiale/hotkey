@@ -10,7 +10,7 @@ import (
 	"os"
 	"testing"
 
-	"golang.design/x/hotkey/mainthread"
+	"github.com/csturiale/hotkey/mainthread"
 )
 
 // The test cannot be run twice since the mainthread loop may not be terminated:

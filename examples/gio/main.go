@@ -9,7 +9,7 @@ import (
 
 	"gioui.org/app"
 	"gioui.org/unit"
-	"golang.design/x/hotkey"
+	"github.com/csturiale/hotkey"
 )
 
 func main() {
@@ -18,7 +18,7 @@ func main() {
 }
 
 func fn() {
-	w := app.NewWindow(app.Title("golang.design/x/hotkey"), app.Size(unit.Dp(200), unit.Dp(200)))
+	w := app.NewWindow(app.Title("github.com/csturiale/hotkey"), app.Size(unit.Dp(200), unit.Dp(200)))
 
 	go reghk()
 

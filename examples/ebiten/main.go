@@ -7,8 +7,8 @@ package main
 import (
 	"log"
 
+	"github.com/csturiale/hotkey"
 	"github.com/hajimehoshi/ebiten/v2"
-	"golang.design/x/hotkey"
 )
 
 type Game struct{}

@@ -9,11 +9,11 @@ import (
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/widget"
-	"golang.design/x/hotkey"
+	"github.com/csturiale/hotkey"
 )
 
 func main() {
-	w := app.New().NewWindow("golang.design/x/hotkey")
+	w := app.New().NewWindow("github.com/csturiale/hotkey")
 	label := widget.NewLabel("Hello golang.design!")
 	button := widget.NewButton("Hi!", func() { label.SetText("Welcome :)") })
 	w.SetContent(container.NewVBox(label, button))

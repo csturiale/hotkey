@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"runtime"
 
+	"github.com/csturiale/hotkey"
 	"github.com/go-gl/glfw/v3.3/glfw"
-	"golang.design/x/hotkey"
 )
 
 func init() {
@@ -22,7 +22,7 @@ func main() {
 		panic(err)
 	}
 	defer glfw.Terminate()
-	window, err := glfw.CreateWindow(640, 480, "golang.design/x/hotkey", nil, nil)
+	window, err := glfw.CreateWindow(640, 480, "github.com/csturiale/hotkey", nil, nil)
 	if err != nil {
 		panic(err)
 	}

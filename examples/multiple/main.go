@@ -8,8 +8,8 @@ import (
 	"log"
 	"sync"
 
-	"golang.design/x/hotkey"
-	"golang.design/x/hotkey/mainthread"
+	"github.com/csturiale/hotkey"
+	"github.com/csturiale/hotkey/mainthread"
 )
 
 func main() { mainthread.Init(fn) }

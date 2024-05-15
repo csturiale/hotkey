@@ -1,4 +1,4 @@
-module golang.design/x/hotkey/examples
+module github.com/csturiale/hotkey/examples
 
 go 1.19
 
@@ -7,7 +7,7 @@ require (
 	gioui.org v0.0.0-20221223153152-aa2a948b863a
 	github.com/go-gl/glfw/v3.3/glfw v0.0.0-20221017161538-93cebf72946b
 	github.com/hajimehoshi/ebiten/v2 v2.4.15
-	golang.design/x/hotkey v0.4.0
+	github.com/csturiale/hotkey v0.4.0
 )
 
 require (
@@ -48,4 +48,4 @@ require (
 	honnef.co/go/js/dom v0.0.0-20210725211120-f030747120f2 // indirect
 )
 
-replace golang.design/x/hotkey => ../
+replace github.com/csturiale/hotkey => ../

@@ -15,7 +15,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"golang.design/x/hotkey/internal/win"
+	"github.com/csturiale/hotkey/internal/win"
 )
 
 type platformHotkey struct {

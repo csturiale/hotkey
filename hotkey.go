@@ -38,8 +38,8 @@
 //	import (
 //		"log"
 //
-//		"golang.design/x/hotkey"
-//		"golang.design/x/hotkey/mainthread"
+//		"github.com/csturiale/hotkey"
+//		"github.com/csturiale/hotkey/mainthread"
 //	)
 //
 //	func main() { mainthread.Init(fn) } // Not necessary when use in Fyne, Ebiten or Gio.
@@ -59,7 +59,7 @@
 //		log.Printf("hotkey: %v is unregistered\n", hk)
 //	}
 //
-// [mainthread]: https://pkg.go.dev/golang.design/x/hotkey/mainthread
+// [mainthread]: https://pkg.go.dev/github.com/csturiale/hotkey/mainthread
 // [examples]: https://github.com/golang-design/hotkey/tree/main/examples
 package hotkey
 

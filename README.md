@@ -1,9 +1,9 @@
-# hotkey [![PkgGoDev](https://pkg.go.dev/badge/golang.design/x/hotkey)](https://pkg.go.dev/golang.design/x/hotkey) ![](https://changkun.de/urlstat?mode=github&repo=golang-design/hotkey) ![hotkey](https://github.com/golang-design/hotkey/workflows/hotkey/badge.svg?branch=main)
+# hotkey [![PkgGoDev](https://pkg.go.dev/badge/github.com/csturiale/hotkey)](https://pkg.go.dev/github.com/csturiale/hotkey) ![](https://changkun.de/urlstat?mode=github&repo=golang-design/hotkey) ![hotkey](https://github.com/golang-design/hotkey/workflows/hotkey/badge.svg?branch=main)
 
 cross platform hotkey package in Go
 
 ```go
-import "golang.design/x/hotkey"
+import "github.com/csturiale/hotkey"
 ```
 
 ## Features
@@ -24,8 +24,8 @@ package main
 import (
 	"log"
 
-	"golang.design/x/hotkey"
-	"golang.design/x/hotkey/mainthread"
+	"github.com/csturiale/hotkey"
+	"github.com/csturiale/hotkey/mainthread"
 )
 
 func main() { mainthread.Init(fn) } // Not necessary when use in Fyne, Ebiten or Gio.
@@ -53,7 +53,7 @@ Note platform specific details:
   restriction), hotkey events must be handled on the "main thread".
   Therefore, in order to use this package properly, one must start an OS
   main event loop on the main thread, For self-contained applications,
-  using [golang.design/x/hotkey/mainthread](https://pkg.go.dev/golang.design/x/hotkey/mainthread)
+  using [github.com/csturiale/hotkey/mainthread](https://pkg.go.dev/github.com/csturiale/hotkey/mainthread)
   is possible. It is uncessary or applications based on other GUI frameworks,
   such as fyne, ebiten, or Gio. See the "[./examples](./examples)" folder
   for more examples.

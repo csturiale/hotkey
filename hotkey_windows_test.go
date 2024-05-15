@@ -14,7 +14,7 @@ import (
 	"testing"
 	"time"
 
-	"golang.design/x/hotkey"
+	"github.com/csturiale/hotkey"
 )
 
 // TestHotkey should always run success.

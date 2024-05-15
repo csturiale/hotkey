@@ -6,8 +6,8 @@ package main
 import (
 	"log"
 
-	"golang.design/x/hotkey"
-	"golang.design/x/hotkey/mainthread"
+	"github.com/csturiale/hotkey"
+	"github.com/csturiale/hotkey/mainthread"
 )
 
 func main() { mainthread.Init(fn) } // Not necessary when use in Fyne, Ebiten or Gio.
