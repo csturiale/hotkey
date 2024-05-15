@@ -108,6 +108,51 @@ func New(mods []Modifier, key Key) *Hotkey {
 	return hk
 }
 
+func NewModifierKey(mod Modifier) *Hotkey {
+	keydownIn, keydownOut := newEventChan()
+	keyupIn, keyupOut := newEventChan()
+	hk := &Hotkey{
+		mods:       []Modifier{mod},
+		keydownIn:  keydownIn,
+		keydownOut: keydownOut,
+		keyupIn:    keyupIn,
+		keyupOut:   keyupOut,
+	}
+
+	// Make sure the hotkey is unregistered when the created
+	// hotkey is garbage collected.
+	runtime.SetFinalizer(hk, func(x interface{}) {
+		hk := x.(*Hotkey)
+		hk.unregister()
+		close(hk.keydownIn)
+		close(hk.keyupIn)
+	})
+	return hk
+}
+
+func NewKey(key Key) *Hotkey {
+	keydownIn, keydownOut := newEventChan()
+	keyupIn, keyupOut := newEventChan()
+	hk := &Hotkey{
+		mods:       []Modifier{},
+		key:        key,
+		keydownIn:  keydownIn,
+		keydownOut: keydownOut,
+		keyupIn:    keyupIn,
+		keyupOut:   keyupOut,
+	}
+
+	// Make sure the hotkey is unregistered when the created
+	// hotkey is garbage collected.
+	runtime.SetFinalizer(hk, func(x interface{}) {
+		hk := x.(*Hotkey)
+		hk.unregister()
+		close(hk.keydownIn)
+		close(hk.keyupIn)
+	})
+	return hk
+}
+
 // Register registers a combination of hotkeys. If the hotkey has
 // registered. This function will invalidates the old registration
 // and overwrites its callback.
